@@ -3,3 +3,4 @@
 .devenv*
 devenv.local.nix
 hellow-wormhole/
+.direnv
