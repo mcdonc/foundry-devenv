@@ -10,7 +10,7 @@ let
   # pkgs-subflake = import inputs.subflake { system = pkgs.system; }; 
 in {
     # https://devenv.sh/basics/
-    env.GREET = "This is a wormhole dev environment";
+    env.GREET = "This is a foundry dev environment";
 
 
     # https://devenv.sh/packages/
@@ -20,35 +20,16 @@ in {
       pkgs.jq
       pkgs.zip
       pkgs.unzip
-      pkgs-stable.yq
-      pkgs-stable.glibc
-      pkgs-stable.python39
-      pkgs-stable.python39Packages.matplotlib
-      pkgs-stable.python39Packages.jmespath
-      pkgs-stable.python39Packages.graphviz
-      # pkgs-stable.python39Packages.poetry
-      pkgs-stable.python39Packages.numpy
-      pkgs-stable.python39Packages.pip
-      pkgs-stable.python39Packages.venvShellHook
-      pkgs-stable.nodejs
+      pkgs-stable.nodejs_18
       pkgs-stable.nodePackages.typescript
     ];
-
-    # languages.python = {
-    #   enable = true;
-    #   version = "3.9";
-    #   venv.enable = true;
-    #   venv.requirements = ''
-    #     requests
-    #   '';
-    # };
 
     difftastic.enable = true;
 
     enterShell = ''
       echo -e "\\033[1;34m*********************************************************\\033[0m"
       echo -e "\\033[1;34m*                                                       *\\033[0m"
-      echo -e "\\033[1;34m*    \\033[1;32mWelcome to the Nix dev environment for Wormhole!\\033[1;34m   *\\033[0m"
+      echo -e "\\033[1;34m*    \\033[1;32mWelcome to the Nix dev environment for foundry! \\033[1;34m   *\\033[0m"
       echo -e "\\033[1;34m*                                                       *\\033[0m"
       echo -e "\\033[1;34m*    For more information, please visit:                *\\033[0m"
       echo -e "\\033[1;36m*    https://github.com/shazow/foundry.nix              *\\033[0m"
@@ -60,6 +41,7 @@ in {
 
     # https://devenv.sh/languages/
     # languages.nix.enable = true;
+    # languages.typescript.enable = true;
 
     # https://devenv.sh/scripts/
     # scripts.hello.exec = /tdp/scripts/script.sh;
