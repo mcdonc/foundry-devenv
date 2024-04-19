@@ -2,11 +2,5 @@ allowUnfree: true
 inputs:
   nixpkgs:
     url: github:NixOS/nixpkgs/nixpkgs-unstable
-  nixpkgs-stable:
-    url: github:NixOS/nixpkgs/nixos-23.05
-  nixpkgs-python:
-    url: github:cachix/nixpkgs-python
-  foundry-overlay:
-    url: path:./foundry-overlay
-    overlays:
-      - default
+  foundry:
+    url: github:shazow/foundry.nix/monthly
